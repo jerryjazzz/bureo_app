@@ -1,0 +1,21 @@
+<ion-view view-title="Resultados">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div>
+            <a class="item">
+                <i class="icon ion-location result-icon"></i>
+                Granada
+                <p>5 resultados</p>
+            </a>
+        </div>
+        <div class="padding">
+            <button class="button button-block button-energized"> Más filtros </button>
+        </div>
+        <div class="list animate-fade-slide-in-right results">
+            <a ng-repeat="fiesta in fiestas" class="item item-avatar">
+                <img src="img/{{fiesta.imagen}}.png">
+                <h2>{{fiesta.nombre}}</h2>
+                <p>{{fiesta.usuario}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

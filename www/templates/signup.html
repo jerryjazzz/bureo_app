@@ -1,0 +1,21 @@
+<ion-view view-title="Signup" align-title="left">
+    <ion-content style="background-color: #fbc02d;">
+        <div class="hero flat logo-signup">
+            <div class="content">
+                <div class="bureo-logo"></div>
+            </div>
+        </div>
+        <div class="list signup-form" name="signupForm">
+            <ion-md-input ng-model="usuario.nombre" placeholder="Nombre" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="usuario.apellidos" placeholder="Apellidos" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="usuario.email" placeholder="Correo electrónico" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="usuario.usuario" placeholder="Usuario" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="usuario.password" placeholder="Password" highlight-color="Contraseña" type="password" required></ion-md-input>
+        </div>        
+        <div class="padding">
+            <button ng-click="createUser()" ui-sref="app.home" class="button button-full ink login-button sign-up-button" data-ng-disabled="checkForm()">
+                CREAR CUENTA
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

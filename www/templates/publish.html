@@ -1,0 +1,18 @@
+<ion-view view-title="Publicar fiesta">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+                <ion-md-input ng-model="fiesta.nombre" placeholder="Nombre de fiesta" highlight-color="balanced" type="text" required></ion-md-input>
+            </div>            
+            <div class="padding">
+                <ion-md-input ng-model="fiesta.descripcion" placeholder="Descripción" highlight-color="balanced" type="text" required></ion-md-input>
+            </div>
+        </div>            
+        <div class="padding">
+            <button ng-click="publish()" ui-sref="app.home" class="button button-block button-energized ink" data-ng-disabled="checkForm()">
+            <!-- <button ng-click="publish()" class="button button-block button-energized ink" data-ng-disabled="checkForm()"> -->
+                Publicar Fiesta
+            </button>
+        </div>
+    </ion-content>
+</ion-view>
