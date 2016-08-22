@@ -1,0 +1,11 @@
+{
+  "name": "bureo",
+  "app_id": "",
+  "defaultBrowser": "firefox",
+  "proxies": [
+    {
+      "path": "/api/bureo",
+      "proxyUrl": "http://localhost:80/bureo/frontend/web/index.php/fiestas/"
+    }
+  ]
+}

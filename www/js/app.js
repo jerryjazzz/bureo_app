@@ -98,6 +98,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
         }
     })
 
+    .state('app.filters', {
+        url: '/filters',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/filters.html',
+                controller: 'ResultsCtrl'
+            },
+            'fabContent': {
+                template: '<button id="fab-results" ui-sref="app.results" class="button button-fab button-fab-bottom-right button-positive-900"><i class="icon ion-android-search"></i></button>',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
     .state('app.results', {
         url: '/results',
         views: {
@@ -107,6 +125,78 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
             },
             'fabContent': {
                 template: '<button id="fab-results" ui-sref="app.results" class="button button-fab button-fab-bottom-right button-positive-900"><i class="icon ion-android-search"></i></button>',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.publish_place', {
+        url: '/publish_place',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/publish_place.html',
+                controller: 'PublishCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.publish_music', {
+        url: '/publish_music',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/publish_music.html',
+                controller: 'PublishCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.publish_commercial', {
+        url: '/publish_commercial',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/publish_commercial.html',
+                controller: 'PublishCtrl'
+            },
+            'fabContent': {
+                template: '',
+                controller: function ($timeout) {
+                    /*$timeout(function () {
+                        document.getElementById('fab-profile').classList.toggle('on');
+                    }, 800);*/
+                }
+            }
+        }
+    })
+
+    .state('app.publish_price', {
+        url: '/publish_price',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/publish_price.html',
+                controller: 'PublishCtrl'
+            },
+            'fabContent': {
+                template: '',
                 controller: function ($timeout) {
                     /*$timeout(function () {
                         document.getElementById('fab-profile').classList.toggle('on');
@@ -131,7 +221,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ionic-material', 'io
                     }, 800);*/
                 }
             }
-        }
+        }   
     })
     ;
 

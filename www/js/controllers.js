@@ -102,12 +102,14 @@ angular.module('starter.controllers', [])
     };
 })
 
-.controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk) {
+.controller('LoginCtrl', function($scope, $timeout, $stateParams, ionicMaterialInk, $ionicHistory) {
     $scope.$parent.clearFabs();
     $timeout(function() {
         $scope.$parent.hideHeader();
     }, 0);
     ionicMaterialInk.displayEffect();
+
+    console.log($ionicHistory.currentStateName());
 })
 
 .controller('SignupCtrl', function($scope, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicHistory) {
@@ -139,7 +141,7 @@ angular.module('starter.controllers', [])
     }
 })
 
-.controller('HomeCtrl', function($scope, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk) {
+.controller('HomeCtrl', function($scope, $rootScope, $stateParams, $timeout, ionicMaterialMotion, ionicMaterialInk, $ionicPlatform) {
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -166,6 +168,10 @@ angular.module('starter.controllers', [])
     var nombre = $rootScope.nombre;
     var apellidos = $rootScope.apellidos;
     var usuario = $rootScope.usuario;
+
+    $ionicPlatform.registerBackButtonAction(function () {
+        console.log("olaaaa");
+    }, 100);
 })
 
 .controller('ResultsCtrl', function($scope, $rootScope, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
@@ -217,6 +223,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PublishCtrl', function($scope, $rootScope, $http, $stateParams, $timeout, ionicMaterialInk, ionicMaterialMotion) {
+    console.log("PublishCtrl");
     // Set Header
     $scope.$parent.showHeader();
     $scope.$parent.clearFabs();
@@ -279,8 +286,9 @@ angular.module('starter.controllers', [])
         // var link = 'http://localhost/bureo/frontend/web/index.php/fiestas';
 
         var data2 = {
-            usuario: "PACO",
+            usuario: $rootScope.usuario,
             nombre: $scope.fiesta.nombre,
+            descripcion: $scope.fiesta.descripcion,
         };
 
         var data3 = serializeData(data2);

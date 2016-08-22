@@ -87,6 +87,11 @@ p {
 
 /* Login
 ==================================*/
+
+.logo-container{
+    height: 340px !important;
+}
+
 .bureo-logo {
     background-color: #fff;
     background: url('../img/logo.png') center;
@@ -94,6 +99,17 @@ p {
     margin: 0 auto;
     width: 100%;
     background-repeat: no-repeat;
+}
+
+.bureo-logo2 {
+    background-color: #fff;
+    background: url('../img/logo2.png') center;
+    height: 270px;
+    margin: 0 auto;
+    width: 100%;    
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
 }
 
 .social-login {
