@@ -1,0 +1,22 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="padding publishForm" name="publishForm">              
+            <h4>Party: {{party.nombre}}</h4>
+            <div class="list list-inset"> 
+                <div class="item"> Descripción: {{party.descripcion}} </div> 
+                <div class="item"> Lugar: {{party.lugar}} </div> 
+                <div class="item"> Música: {{party.musica}} </div> 
+                <div class="item"> Precio: {{party.precio}} </div> 
+                <div class="item"> Invitados: {{party.invitados}} </div> 
+            </div>
+        </div>
+        <div class="padding">
+            <button ng-click="publish_party()" class="button button-block button-calm ink" data-ng-disabled="checkForm()">
+                Publicar Party
+            </button>
+            <button ng-click="publish_party_prueba()" class="button button-block button-calm ink" data-ng-disabled="checkForm()">
+                Publicar Party Prueba
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

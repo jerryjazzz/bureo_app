@@ -6,14 +6,14 @@
             </div>
         </div>
         <div class="list signup-form" name="signupForm">
-            <ion-md-input ng-model="usuario.nombre" placeholder="Nombre" highlight-color="balanced" type="text" required></ion-md-input>
-            <ion-md-input ng-model="usuario.apellidos" placeholder="Apellidos" highlight-color="balanced" type="text" required></ion-md-input>
-            <ion-md-input ng-model="usuario.email" placeholder="Correo electrónico" highlight-color="balanced" type="text" required></ion-md-input>
-            <ion-md-input ng-model="usuario.usuario" placeholder="Usuario" highlight-color="balanced" type="text" required></ion-md-input>
-            <ion-md-input ng-model="usuario.password" placeholder="Password" highlight-color="Contraseña" type="password" required></ion-md-input>
+            <ion-md-input ng-model="user.name" placeholder="Nombre" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="user.surename" placeholder="Apellidos" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="user.email" placeholder="Correo electrónico" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="user.username" placeholder="Usuario" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="user.password" placeholder="Password" highlight-color="Contraseña" type="password" required></ion-md-input>
         </div>        
         <div class="padding">
-            <button ng-click="createUser()" ui-sref="app.home" class="button button-full ink login-button sign-up-button" data-ng-disabled="checkForm()">
+            <button ng-click="createUser()" class="button button-full ink login-button sign-up-button" data-ng-disabled="checkForm()">
                 CREAR CUENTA
             </button>
         </div>

@@ -1,0 +1,86 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+                <h4>Fotos espacio Party</h4>
+
+                  <input class="bottom-marg-15" type="file" name="file" file="file">
+                  <!-- <button class="button button-small button-full button-positive" ng-disabled="file.size&amp;&amp;false || uploadProgress&gt;0" ng-click="upload()" ng-cloak="">Upload</button> -->
+                  <img class="fit" ng-if="uploadUri" ng-src="">
+                  <a ng-href="" ng-bind="uploadUri"></a>
+                  <button class="button button-block button-calm ink"> Subir foto </button>
+            <div class="list half">
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>Hall</h2>
+                        <img class="full-image" src="img/publish/hall.jpg">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            4
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            2
+                        </a>
+                    </div>
+                </div>
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>Pista de tenis</h2>
+                        <img class="full-image" src="img/publish/tenis.jpg">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            6
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            1
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="list half">
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>Sala bar</h2>
+                        <img class="full-image" src="img/publish/bar.jpg">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            22
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            9
+                        </a>
+                    </div>
+                </div>
+                <div ui-sref="app.profile" class="card card-gallery item item-text-wrap">
+                    <div class="ink dark-bg">
+                        <h2>Sala baile</h2>
+                        <img class="full-image" src="img/publish/disco.png">
+                    </div>
+                    <div class="item tabs tabs-secondary tabs-icon-left">
+                        <a class="tab-item stable-bg assertive">
+                            <i class="icon ion-heart"></i>
+                            8
+                        </a>
+                        <a class="tab-item stable-bg positive-900">
+                            <i class="icon ion-chatbubbles"></i>
+                            0
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                <button class="button button-block button-calm ink" ui-sref="app.publish_location"> Siguiente </button>
+                            </div>   
+
+        </div>         
+    </ion-content>
+</ion-view>

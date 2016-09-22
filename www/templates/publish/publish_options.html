@@ -1,0 +1,27 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+            	<h4>Condiciones de la Party</h4>
+		        <ion-checkbox ng-repeat="item in party.options"
+		                      ng-model="item.checked" 
+                          ng-true-value="1" 
+                          ng-false-value="0" 
+		                      ng-checked="item.checked">
+		          {{ item.text }}
+		        </ion-checkbox>
+                
+                <br/></b>
+
+                <h4>Franja de edad</h4>
+                <ion-checkbox ng-repeat="item in party.ages"
+                              ng-model="item.checked" 
+                              ng-true-value="1" 
+                              ng-false-value="0" 
+                              ng-checked="item.checked">
+                  {{ item.text }}
+                </ion-checkbox>
+                <button class="button button-block button-calm ink" ui-sref="app.publish" data-ink-color="#9DEAFF" data-ink-opacity="1"> Siguiente </button>
+            </div>            
+    </ion-content>
+</ion-view>

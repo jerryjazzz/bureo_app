@@ -1,0 +1,15 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+
+                <ion-md-input ng-model="party.name" placeholder="Nombre" highlight-color="balanced" type="text" required></ion-md-input>
+                <label class="item item-input">
+                    <textarea rows="10" ng-model="party.description" placeholder="Descripción de la Party" highlight-color="balanced" type="text"></textarea>
+                </label>
+                <br/></b>
+                <button class="button button-block button-calm ink" data-ink-color="#9DEAFF" data-ink-opacity="1" data-ng-disabled="checkNameForm()" ng-click="saveNameDescription()" ui-sref="app.publish"> Siguiente </button>
+                <!-- <button ng-click="createUser()" ui-sref="app.home" class="button button-full ink login-button sign-up-button" data-ng-disabled="checkForm()"> -->
+            </div>            
+    </ion-content>
+</ion-view>

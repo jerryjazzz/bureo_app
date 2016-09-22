@@ -1,14 +1,18 @@
 <ion-view view-title="Login" align-title="left">
     <ion-content style="background-color: #fbc02d;">
-        <div class="hero no-header flat logo-container">
+        <div class="hero flat logo-signup">
             <div class="content">
-                <div class="bureo-logo2"></div>
+                <div class="bureo-logo"></div>
             </div>
         </div>
-        <div class="padding login-buttons">
-            <button ui-sref="app.home" class="button button-full button-assertive ink login-button facebook-login">Facebook</button>
-            <button ui-sref="app.home" class="button button-full button-assertive ink login-button google-login">Google</button>
-            <button ui-sref="app.signup" class="button button-full ink login-button sign-up-button">Crear cuenta</button>
+        <div class="list signup-form" name="signupForm">
+            <ion-md-input ng-model="user.username" placeholder="Usuario" highlight-color="balanced" type="text" required></ion-md-input>
+            <ion-md-input ng-model="user.password" placeholder="Password" highlight-color="Contraseña" type="password" required></ion-md-input>
+        </div>        
+        <div class="padding">
+            <button ng-click="login()" class="button button-full ink login-button sign-up-button" data-ng-disabled="checkForm()">
+                ACCEDER
+            </button>
         </div>
     </ion-content>
 </ion-view>

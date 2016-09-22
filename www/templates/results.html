@@ -11,7 +11,7 @@
             <button class="button button-block button-energized"> Más filtros </button>
         </div>
         <div class="list animate-fade-slide-in-right results">
-            <a ng-repeat="fiesta in fiestas" class="item item-avatar">
+            <a ng-repeat="fiesta in fiestas" class="item item-avatar" ui-sref="app.party({id:{{fiesta.id}}})">
                 <img src="img/{{fiesta.imagen}}.png">
                 <h2>{{fiesta.nombre}}</h2>
                 <p>{{fiesta.usuario}}</p>

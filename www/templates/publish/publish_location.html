@@ -1,0 +1,13 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+            	<h4>Localización</h4>		       
+                <iframe frameborder="0" allowfullscreen="" style="height: 400px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1589.5516749991173!2d-3.607417228084008!3d37.17401479360249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDEwJzI2LjQiTiAzwrAzNicyMy40Ilc!5e0!3m2!1ses!2ses!4v1472060149539" class="col col-100 mapa" onLoad="uploadDone()"></iframe>
+                <button class="button button-small button-royal"> Tu localización </button>
+
+                <button class="button button-block button-calm ink" ui-sref="app.publish_music" data-ink-color="#9DEAFF" data-ink-opacity="1"> Siguiente </button>
+            </div>            
+    </ion-content>
+</ion-view>
+

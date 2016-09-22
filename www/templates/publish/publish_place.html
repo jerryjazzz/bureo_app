@@ -1,0 +1,13 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+                <ion-md-input ng-model="party.nombre" ng-class="{'used': party.nombre.length > 0}" placeholder="Nombre party" highlight-color="balanced" type="text" required></ion-md-input>
+                <ion-md-input ng-model="party.descripcion" placeholder="Descripción party" highlight-color="balanced" type="text" required></ion-md-input>
+
+                <h4>Elige el lugar</h4>
+             	<button class="button button-block button-calm ink" ng-click="set_place('casa')" ui-sref="app.publish_place_house" data-ng-disabled="checkPublishPlace()"> Casa </button>
+            	<button class="button button-block button-calm ink" ng-click="set_place('local')" ui-sref="app.publish_photos" data-ng-disabled="checkPublishPlace()"> Local Comercial </button>
+            </div>            
+    </ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view view-title="Publicar Party">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="list publishForm" name="publishForm">            
+            <div class="padding">
+                <h4>Precio, invitados y horario</h4>
+                <div class="item item-input">
+				    <span class="input-label">Precio</span>
+				    <ionic-numberpicker input-obj="pricePicker">
+				      <button class="button button-positive order-button">{{party.precio}} €
+				      </button>
+				    </ionic-numberpicker>&nbsp;
+				    <b> </b>
+				</div>
+                <div class="item item-input">
+				    <span class="input-label">Número de invitados</span>
+				    <ionic-numberpicker input-obj="guestsPicker">
+				      <button class="button button-positive order-button">{{party.invitados}}
+				      </button>
+				    </ionic-numberpicker>&nbsp;
+				    <b> </b>
+				</div>
+
+				<button class="button icon-left button-balanced" ng-click="set_start_time()" >Hora inicio</button> 
+				<button class="button icon-right button-balanced" ng-click="set_end_time()" >Hora fin</button>
+                <button class="button button-block button-calm ink" ui-sref="app.publish_options" data-ink-color="#9DEAFF" data-ink-opacity="1"> Aceptar </button>
+            </div>            
+    </ion-content>
+</ion-view>
